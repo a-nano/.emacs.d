@@ -51,6 +51,15 @@
 ;; スペース、タブを可視化する
 (setq scroll-conservatively 1)
 
+;; Consolas + MSゴシック
+(set-default-font "Consolas 10")
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0208
+                  '("ＭＳ ゴシック" . "unicode-bmp"))
+(set-fontset-font (frame-parameter nil 'font)
+                  'katakana-jisx0201
+                  '("ＭＳ ゴシック" . "unicode-bmp"))
+
 ;;====================
 ;; Window System
 ;;====================
