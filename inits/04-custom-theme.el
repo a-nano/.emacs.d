@@ -1,7 +1,7 @@
 ;; 括弧の色を薄く
 (defvar paren-face 'paren-face)
 (make-face 'paren-face)
-(set-face-foreground 'paren-face "#666666")
+(set-face-foreground 'paren-face "#dcdcdc")
 
 (dolist (mode '(lisp-mode
                 cl21-mode
