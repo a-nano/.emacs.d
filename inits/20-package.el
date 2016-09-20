@@ -10,6 +10,7 @@
     auto-complete
     macrostep
     popup
+    smart-cursor-color
     ))
 
 (let ((not-installed (loop for x in installing-package-list
