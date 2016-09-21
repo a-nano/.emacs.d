@@ -52,7 +52,7 @@
 (setq scroll-conservatively 1)
 
 ;; Consolas + MSゴシック
-(set-default-font "Consolas 10")
+(set-default-font "Consolas 12")
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0208
                   '("ＭＳ ゴシック" . "unicode-bmp"))
@@ -66,7 +66,7 @@
 
 ;; ウインドウを透明にする
 ;; アクティブウインドウ/非アクティブウインドウ(alphaの値で透明度を指定)
-(add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))
+(add-to-list 'default-frame-alist '(alpha . (0.80 0.70)))
 
 ;; 画面の色を設定
 (if window-system
@@ -74,9 +74,7 @@
       ;; 文字の色を設定
       (add-to-list 'default-frame-alist '(foreground-color . "white"))
       ;; 背景色を設定
-      (add-to-list 'default-frame-alist '(background-color . "black"))
-      ;; カーソルの色を設定
-      (add-to-list 'default-frame-alist '(cursor-color . "gray9"))))
+      (add-to-list 'default-frame-alist '(background-color . "black"))))
 
 ;; Emacs serverを起動
 (server-start)

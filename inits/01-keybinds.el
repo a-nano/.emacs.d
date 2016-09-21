@@ -66,6 +66,51 @@
 (global-set-key (kbd "M-<down>") 'open-next-file)
 (global-set-key (kbd "M-<up>") 'open-previous-file)
 
+;;====================
+;; Window
+;;====================
+(define-prefix-command 'windmove-map)
+(global-set-key (kbd "C-q") 'windmove-map)
+(define-key windmove-map "h" 'windmove-left)
+(define-key windmove-map "j" 'windmove-down)
+(define-key windmove-map "k" 'windmove-up)
+(define-key windmove-map "l" 'windmove-right)
+(define-key windmove-map "0" 'delete-window)
+(define-key windmove-map "1" 'delete-other-windows)
+(define-key windmove-map "2" 'split-window-vertically)
+(define-key windmove-map "3" 'split-window-horizontally)
+
+(defun split-window-conditional ()
+  (interactive)
+  (if (> (* (window-height) 2) (window-width))
+      (split-window-vertically)
+    (split-window-horizontally)))
+(define-key windmove-map "s" 'split-window-conditional)
+
+; 画面の3分割
+; http://d.hatena.ne.jp/yascentur/20110621/1308585547
+(defun split-window-vertically-n (num_wins)
+  (interactive "p")
+  (if (= num_wins 2)
+      (split-window-vertically)
+    (progn
+      (split-window-vertically
+       (- (window-height) (/ (window-height) num_wins)))
+      (split-window-vertically-n (- num_wins 1)))))
+(defun split-window-horizontally-n (num_wins)
+  (interactive "p")
+  (if (= num_wins 2)
+      (split-window-horizontally)
+    (progn
+      (split-window-horizontally
+       (- (window-width) (/ (window-width) num_wins)))
+      (split-window-horizontally-n (- num_wins 1)))))
+(global-set-key "\C-x@" '(lambda ()
+                           (interactive)
+                           (split-window-vertically-n 3)))
+(global-set-key "\C-x!" '(lambda ()
+                           (interactive)
+(split-window-horizontally-n 3)))
 
 ;;====================
 ;; Killing
