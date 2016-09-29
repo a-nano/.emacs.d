@@ -16,3 +16,10 @@
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'slime-repl-mode))
+
+;; バッファでのキーバインド割り当て
+(global-set-key "\C-c\C-k" 'slime-compile-and-load-file)
+(global-set-key "\C-c\C-c" 'slime-compile-defun)
+(global-set-key "\C-c\C-z" 'slime-repl)
+(global-set-key "\M-." 'slime-edit-definition)
+(global-set-key "\M-," 'slime-pop-find-definition-stack)
