@@ -27,3 +27,5 @@
 ;; auto-mode-alist
 (loop for (k . v) in my-fav-modes
       do (unless (null v) (add-to-list 'auto-mode-alist (cons v k))))
+
+(autoload 'js2-mode "js2" nil t)
