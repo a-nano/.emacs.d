@@ -10,19 +10,19 @@
 ;; 行数を表示
 (global-linum-mode t)
 
+(global-hl-line-mode t)
 ;; カーソル行をハイライト
 (defface hlline-face
   '((((class color)
       (background dark))
-     (:background "dark slate gray"))
+     (:background "DarkSlateBlue" t))
     (((class color)
       (background light))
-     (:background "ForestGreen"))
+     (:background "ForestGreen" t))
     (t
      ()))
-  nil :group 'font-lock-highlighting-faces)
+  "*Face used by hi-line.")
 (setq hl-line-face 'hlline-face)
-(global-hl-line-mode)
 
 ;; モード行に行番号、桁番号を表示
 (line-number-mode t)
