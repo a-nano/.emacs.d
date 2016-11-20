@@ -38,4 +38,4 @@
      (get-buffer-create buf-name))))
 
 (define-key global-map
-  "\C-cG" 'scheme-other-window)
+  "\C-cs" 'scheme-other-window)
