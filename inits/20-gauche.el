@@ -11,11 +11,11 @@
 (global-set-key "\C-h" 'delete-backward-char)
 
 ;; 括弧の補完
-(global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
-(setq skeleton-pair 1)
+; (global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
+; (global-set-key (kbd "{") 'skeleton-pair-insert-maybe)
+; (global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
+; (global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
+; (setq skeleton-pair 1)
 
 ;; emacsでGauche
 (setq process-coding-system-alist
