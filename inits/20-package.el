@@ -11,6 +11,8 @@
     macrostep
     popup
     smart-cursor-color
+    clojure-mode
+    cider
     ))
 
 (let ((not-installed (loop for x in installing-package-list
