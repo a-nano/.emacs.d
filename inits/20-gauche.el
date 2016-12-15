@@ -28,7 +28,7 @@
 (defun scheme-other-window ()
   "Run Gauche on other window"
   (interactive)
-  (split-window-horizontally (/ (frame-width) 2))
+  (split-window-vertically)
   (let ((buf-name (buffer-name (current-buffer))))
     (scheme-mode)
     (switch-to-buffer-other-window
