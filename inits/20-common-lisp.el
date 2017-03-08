@@ -5,7 +5,7 @@
 (require 'ac-slime)
 
 ;; sbclをデフォルトのCommon Lisp処理系に設定
-(setq inferior-lisp-program "sbcl")
+(setq inferior-lisp-program "ros -Q run")
 (setq slime-contribs '(slime-fancy))
 
 
